@@ -8,10 +8,18 @@
  */
 
 // Apply the java plugin to add support for Java
-apply plugin: 'java'
+plugins{
+    id 'java'
+    id 'edu.sc.seis.launch4j' version '2.5.3'
+}
 
+launch4j {
+    outfile = 'Pochka.exe'
+    mainClassName = ' '
+}
 // In this section you declare where to find the dependencies of your project
 repositories {
+    mavenCentral()
     // Use 'jcenter' for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
